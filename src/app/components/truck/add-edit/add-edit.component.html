@@ -1,0 +1,30 @@
+<h3>{{ isEditMode ? 'Edit Truck' : 'Add Truck' }}</h3>
+
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Make</mat-label>
+    <input matInput id="make" [(ngModel)]="truck.make" name="make" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Model</mat-label>
+    <input matInput id="model" [(ngModel)]="truck.model" name="model" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>VIN</mat-label>
+    <input matInput id="vin" [(ngModel)]="truck.vin" name="vin" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Color</mat-label>
+    <input matInput id="color" [(ngModel)]="truck.color" name="color" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Year</mat-label>
+    <input matInput id="year" type="number" [(ngModel)]="truck.year" name="year" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">{{ isEditMode ? 'Update' : 'Add' }} Truck</button>
+</form>
